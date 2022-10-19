@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: #F5F5F5;
+}
+.side-bar{
+    min-height: 100vh;
+}
+.main_page_content{
+    background-color: #F5F5F5;
+    width: 100%;
+}

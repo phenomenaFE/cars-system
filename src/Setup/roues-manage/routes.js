@@ -4,6 +4,7 @@ import Categories from '../../Pages/Categories';
 import Favourites from '../../Pages/Favourites';
 import Home from '../../Pages/Home';
 import Cars from '../../Pages/Cars';
+import Roots from '../../roots';
 
 const router = createBrowserRouter(
     [
