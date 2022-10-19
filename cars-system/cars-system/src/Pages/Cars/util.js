@@ -1,0 +1,1 @@
+// if function repeated in this component 
