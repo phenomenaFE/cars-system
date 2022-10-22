@@ -6,7 +6,7 @@ function DashboardCard(props: any) {
         <img
           className=" mt-1 mb-1 ml-auto mr-auto w-16 lg:w-16 "
           src={image}
-          alt="image"
+          alt="imagetest"
         />
         <h4 className="text-xl mt-1 mb-4 font-bold tracking-tight text-black">
           {title}

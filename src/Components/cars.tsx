@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useRecoilState, useRecoilValue } from "recoil";
+import  { useState } from "react";
+import {  useRecoilValue } from "recoil";
 import { fetchCarDetailList } from "../atoms/cars-atom";
 import CarsCard from "../Common/carscard";
 import PersonCounter from "../Common/personscounter";
@@ -12,9 +12,10 @@ function Cars() {
   const carsList = useRecoilValue(fetchCarDetailList);
   const [filteredproduct, setFilteredproduct] = useState(carsList);
   const setFilterHandle = (event: any, filterType: string) => {
+    debugger
     if (filterType === "bymodel") {
       setFilteredproduct(filterByModel(carsList, event));
-    } else {
+    } else if(filterType === "bydate") {
       setFilteredproduct(filterByDate(carsList, event));
     }
   };

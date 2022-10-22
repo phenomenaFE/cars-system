@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { selector } from 'recoil';
 import { getCarGraph, getCarsList } from '../Services/api'
 

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import {  NavLink } from "react-router-dom";
 
 function SideBar() {
   const [open, setOpen] = useState(false);
@@ -128,8 +128,8 @@ function SideBar() {
 
             <ul className="py-4 pb-4 ps-2 space-y-1 text-sm footer-list">
               <li className="rounded-sm">
-                <a
-                  href="#"
+                <NavLink
+                  to="/"
                   className="flex items-center p-2 space-x-3 rounded-md"
                 >
                   <svg
@@ -154,11 +154,11 @@ function SideBar() {
                   </svg>
 
                   <span className="text-dark">Settings</span>
-                </a>
+                </NavLink>
               </li>
               <li className="rounded-sm">
-                <a
-                  href="#"
+                <NavLink
+                  to="/"
                   className="flex items-center p-2 space-x-3 rounded-md"
                 >
                   <svg
@@ -183,7 +183,7 @@ function SideBar() {
                   </svg>
 
                   <span className="text-dark">Logout</span>
-                </a>
+                </NavLink>
               </li>
             </ul>
           </div>

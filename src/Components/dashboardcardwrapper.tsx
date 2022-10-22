@@ -5,7 +5,7 @@ import SemiCircle from "../Common/semicircle";
 
 function DashboardCardsWrapper(props: any) {
   const carSettings = useRecoilValue(fetchCarDChart);
-  console.log(carSettings);
+ 
 
   return (
     <div className="grid lg:grid-cols-4 gap-4 md:grid-cols-2">

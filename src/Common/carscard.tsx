@@ -13,7 +13,7 @@ function CarsCard(props: any) {
       <img
         className="object-cover mt-4 mb-4 w-full lg:w-100 lg:h-40"
         src={image}
-        alt="image"
+        alt="imagetest"
       />
       <div>
         <div className="htmelement-wrapper">{children}</div>
