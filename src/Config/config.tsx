@@ -1,1 +1,1 @@
-export {}
+export const env="https://run.mocky.io/v3/2d576521-659f-437d-bfa6-3e4f575bb6a7"

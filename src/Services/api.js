@@ -1,5 +1,7 @@
 
+import { env } from "../Config/config"
 
-export function getProducts (){
-    return fetch("url").then(res=>res.json())
+
+export function getCarsList (){
+    return fetch(env).then(res=>res.json())
 }

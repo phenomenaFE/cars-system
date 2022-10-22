@@ -16,3 +16,9 @@ body{
     position: absolute;
     bottom: 0;
 }
+.search-wrapper{
+    min-width: 360px;
+}
+.active{
+    color: purple;
+}
