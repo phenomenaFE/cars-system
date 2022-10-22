@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { fetchCarDetailCalc } from "../atoms/cars-atom";
-import CarsDashboard from "../Common/carsbooking";
+import { fetchCarDetailList } from "../atoms/cars-atom";
+import CarsCard from "../Common/carscard";
 import PersonCounter from "../Common/personscounter";
 import rideType from "../Assets/Images/manual.svg";
+import grid from "../Assets/Images/Line.svg";
+import linesystem from "../Assets/Images/linesystem.svg"
 import { filterByDate, filterByModel } from "../Pages/Home/util";
 
 function Cars() {
-  const carsList = useRecoilValue(fetchCarDetailCalc);
+  const carsList = useRecoilValue(fetchCarDetailList);
   const [filteredproduct, setFilteredproduct] = useState(carsList);
   const setFilterHandle = (event: any, filterType: string) => {
     if (filterType === "bymodel") {
@@ -22,8 +24,8 @@ function Cars() {
         Booking
       </h1>
 
-      <div className="mt-4 mb-4">
-        <div className="w-full flex content-between">
+      <div className="mt-4 mb-4 ">
+        <div className="w-full flex justify-between">
           <div className="filter_Wrapper flex">
             <select
               id="modeltype"
@@ -48,11 +50,19 @@ function Cars() {
               ))}
             </select>
           </div>
+          <div className="grid_System flex">
+            <button className="bg-white ml-1 mr-1  hover:bg-gray-100 text-gray-800 rounded-full font-semibold py-2 px-4     shadow">
+               <img src={grid} alt=""/>
+            </button>
+            <button className="bg-violet-800  ml-1 mr-1 hover:bg-violet-400 rounded-full text-gray-800 font-semibold py-2 px-4     shadow">
+               <img src={linesystem} alt=""/>
+            </button>
+          </div>
         </div>
       </div>
       <div className="grid lg:grid-cols-4 gap-4 md:grid-cols-2">
         {filteredproduct.map((car: any) => (
-          <CarsDashboard
+          <CarsCard
             key={car.id}
             name={car.car}
             image={car.imgCar}
@@ -73,7 +83,7 @@ function Cars() {
                 <span className="text-slate-500 ">{car.price}/day</span>
               </div>
             </div>
-          </CarsDashboard>
+          </CarsCard>
         ))}
       </div>
     </>
